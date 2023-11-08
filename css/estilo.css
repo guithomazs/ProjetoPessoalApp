@@ -1,6 +1,5 @@
 body {
     /* background-color: rgb(106, 10, 185); */
-    background: linear-gradient(#b5e48c, #457b9d) fixed;
     background: linear-gradient(#6b08e3, #260b48) fixed;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,11 +9,15 @@ body {
 }
 
 header {
-    background-color: rgb(23, 110, 24);
-    /* Propriedade definida no arquivo do tema */
-    /* background-image: linear-gradient(#003366, #006699); */
     display: flex;
     width: 100%;
+    background-attachment: fixed;
+}
+
+header div#headerGradient {
+    display: flex;
+    width: inherit;
+    background-image: linear-gradient(to bottom, #129915 0%, #005203 100%);
     justify-content: space-between;
     /* Responsivo */
     flex-wrap: wrap;
@@ -51,18 +54,18 @@ div#imagemUsuario img {
     height: 4em;
 }
 
-div#logout {
+div#infoUsuario {
     display: inline-block;
     text-align: center;
     margin: auto 0.5em;
 }
 
-div#logout a.botao {
-    background-color: #17b857;
+div#infoUsuario a.botao {
+    background-color: #129915;
     color: rgb(31, 29, 29);
 }
 
-div#logout a.botao:hover{
+div#infoUsuario a.botao:hover{
     background-color: #1e5e20;
 }
 
@@ -136,4 +139,12 @@ a.botao.pagar {
 
 a.botao.pagar:hover {
     background-color: rgb(189, 21, 21);
+}
+
+/* Main */
+
+main {
+    background-image: linear-gradient(#cccccc, white);
+    padding: 1em;
+    flex-basis: 100%;
 }

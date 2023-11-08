@@ -1,0 +1,139 @@
+body {
+    /* background-color: rgb(106, 10, 185); */
+    background: linear-gradient(#b5e48c, #457b9d) fixed;
+    background: linear-gradient(#6b08e3, #260b48) fixed;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: rgb(23, 110, 24);
+    /* Propriedade definida no arquivo do tema */
+    /* background-image: linear-gradient(#003366, #006699); */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* Responsivo */
+    flex-wrap: wrap;
+}
+
+a.botao {
+    border: 1px solid white;
+    border-radius: 4px;
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 0.4em;
+    line-height: 2em;
+    color: black;
+}
+
+
+div#infoUsuario {
+    text-align: center;
+    margin: auto 0;
+
+}
+
+div#infoUsuario span {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+div#infoUsuario * {
+    margin-left: 0.5em;
+}
+
+div#imagemUsuario img {
+    margin-top: 0.5em;
+    height: 4em;
+}
+
+div#logout {
+    display: inline-block;
+    text-align: center;
+    margin: auto 0.5em;
+}
+
+div#logout a.botao {
+    background-color: #17b857;
+    color: rgb(31, 29, 29);
+}
+
+div#logout a.botao:hover{
+    background-color: #1e5e20;
+}
+
+@media screen and (max-width: 450px) {
+
+    div#logout {
+        text-align: left;
+        margin-top: 1em;
+    }
+
+}
+
+
+/* Tabela */
+
+table {
+    width: 98%;
+    border-spacing: 0.2em;
+    /* Responsivo */
+    display: block;
+    overflow-x: auto;
+    margin: 0 0.5em;
+}
+
+table td, table th {
+    padding: 0.5em;
+}
+
+table th {
+    /* Propriedade definida no arquivo do tema */
+    /* background-color: #003366; */
+    color: white;
+    background-color: #003366;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #501a79;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #640991;
+}
+
+table tbody tr:hover {
+    background-color: #620a63;
+}
+
+table tfoot td {
+    /* Propriedade definida no arquivo do tema */
+    /* border-top: 1px solid #003366; */
+    text-align: center;
+}
+
+table tbody tr td:last-child,
+table tbody tr td.fit {
+    text-align: center;
+    width: 1%;
+    white-space: nowrap;
+}
+
+a.botao.receber {
+    background-color: rgb(95, 182, 95);
+}
+a.botao.receber:hover {
+    background-color: rgb(106, 10, 185);
+}
+
+a.botao.pagar {
+    background-color: rgb(255, 55, 24);
+}
+
+a.botao.pagar:hover {
+    background-color: rgb(189, 21, 21);
+}

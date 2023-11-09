@@ -1,11 +1,10 @@
 body {
     /* background-color: rgb(106, 10, 185); */
-    background: linear-gradient(#6b08e3, #260b48) fixed;
+    background: linear-gradient(to bottom, #6b08e3, rgb(16, 74, 25)) fixed;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 header {
@@ -17,7 +16,7 @@ header {
 header div#headerGradient {
     display: flex;
     width: inherit;
-    background-image: linear-gradient(to bottom, #129915 0%, #005203 100%);
+    background-image: linear-gradient(to bottom, #129915 0%, #024304 100%);
     justify-content: space-between;
     /* Responsivo */
     flex-wrap: wrap;
@@ -33,51 +32,60 @@ a.botao {
     color: black;
 }
 
-
-div#infoUsuario {
+div#divDireita, div#divEsquerda {
     text-align: center;
     margin: auto 0;
-
+    display: inline-block;
 }
 
-div#infoUsuario span {
+div#divDireita > *{
+    vertical-align: middle;
+}
+
+div#divEsquerda span {
     font-weight: bold;
     font-size: 1.5em;
 }
 
-div#infoUsuario * {
+div#divEsquerda * {
     margin-left: 0.5em;
 }
 
-div#imagemUsuario img {
+div#divDireita img {
     margin-top: 0.5em;
+    margin-bottom: 0.5em;
     height: 4em;
 }
 
-div#infoUsuario {
-    display: inline-block;
-    text-align: center;
-    margin: auto 0.5em;
-}
-
-div#infoUsuario a.botao {
+div#divDireita a.botao {
     background-color: #129915;
     color: rgb(31, 29, 29);
 }
 
-div#infoUsuario a.botao:hover{
+div#divDireita a.botao:hover{
     background-color: #1e5e20;
 }
 
-@media screen and (max-width: 450px) {
+ /* DIV DA TABELA */
 
-    div#logout {
-        text-align: left;
-        margin-top: 1em;
-    }
-
+div#myTable {
+    display: flex;
+    flex-direction: column;
 }
 
+div#myTable div#buttonDiv {
+    width: 98%;
+    border-spacing: 0.2em;
+    /* Responsivo */
+    display: block;
+    margin: 0 1em;
+    align-self: center;
+}
+
+div#myTable div#buttonDiv a.botao {
+    display: inline-block;
+    margin: 0.7em 0.3em;
+}
 
 /* Tabela */
 
@@ -85,9 +93,40 @@ table {
     width: 98%;
     border-spacing: 0.2em;
     /* Responsivo */
-    display: block;
-    overflow-x: auto;
     margin: 0 0.5em;
+    align-self: center;
+    max-height: 400px;
+    /* display: flex; */
+    display: block;
+    /* flex-direction: column; */
+    /* text-align: center; */
+}
+
+table tbody {
+    display: block;
+    overflow: auto;
+    max-height: 400px;
+}
+
+table thead {
+    position: relative;
+    display: block;
+    background-color: red;
+}
+
+table thead tr{
+    display: block;
+}
+table tfoot {
+    width: 100%;
+    /* background-color: orange; */
+    display: inline-block;
+}
+
+table tfoot * {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
 }
 
 table td, table th {
@@ -95,28 +134,20 @@ table td, table th {
 }
 
 table th {
-    /* Propriedade definida no arquivo do tema */
-    /* background-color: #003366; */
     color: white;
     background-color: #003366;
 }
 
 table tbody tr:nth-child(odd) {
-    background-color: #501a79;
+    background-color: #00BFFF;
 }
 
 table tbody tr:nth-child(even) {
-    background-color: #640991;
+    background-color: #87CEEB;
 }
 
 table tbody tr:hover {
-    background-color: #620a63;
-}
-
-table tfoot td {
-    /* Propriedade definida no arquivo do tema */
-    /* border-top: 1px solid #003366; */
-    text-align: center;
+    background-color: #1E90FF;
 }
 
 table tbody tr td:last-child,
@@ -130,7 +161,7 @@ a.botao.receber {
     background-color: rgb(95, 182, 95);
 }
 a.botao.receber:hover {
-    background-color: rgb(106, 10, 185);
+    background-color: rgb(38, 104, 50);
 }
 
 a.botao.pagar {

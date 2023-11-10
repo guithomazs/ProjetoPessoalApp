@@ -1,6 +1,14 @@
+:root{
+    --cor-botoes: #222222;
+    --cor-texto-botoes: #222222;
+    --cor-fundo: #0c0b0b;
+    --cor-fundo-tabela: #222222
+}
+
+
 body {
-    /* background-color: rgb(106, 10, 185); */
-    background: linear-gradient(to bottom, #6b08e3, rgb(16, 74, 25)) fixed;
+    background-color: var(--cor-fundo);
+    color: white;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
@@ -16,7 +24,8 @@ header {
 header div#headerGradient {
     display: flex;
     width: inherit;
-    background-image: linear-gradient(to bottom, #129915 0%, #024304 100%);
+    background-color: var(--cor-fundo);
+    color: white;
     justify-content: space-between;
     /* Responsivo */
     flex-wrap: wrap;
@@ -29,7 +38,7 @@ a.botao {
     cursor: pointer;
     padding: 0.4em;
     line-height: 2em;
-    color: black;
+    /* color: black; */
 }
 
 div#divDireita, div#divEsquerda {
@@ -58,12 +67,11 @@ div#divDireita img {
 }
 
 div#divDireita a.botao {
-    background-color: #129915;
-    color: rgb(31, 29, 29);
+    background-color: var(--cor-botoes);
 }
 
 div#divDireita a.botao:hover{
-    background-color: #1e5e20;
+    background-color: var(--cor-botoes);
 }
 
  /* DIV DA TABELA */
@@ -96,21 +104,18 @@ table {
     align-self: center;
     max-height: 400px;
     display: block;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* text-align: center; */
+    /* background-color: var(--cor-fundo-tabela); */
 }
 
 table thead {
     display: inline-block;
     display: block;
     width: 100%;
-    background-color: #129915;
+    background-color: var(--cor-fundo-tabela);
 }
 
 table tbody{
     width: 100%;
-    /* display: inline-block; */
     display: block;
     overflow: auto;
     max-height: 400px ;
@@ -118,7 +123,7 @@ table tbody{
 
 table tfoot {
     width: 100%;
-    background-color: orange;
+    background-color: var(--cor-fundo-tabela);
     display: inline-block;
 }
 
@@ -134,19 +139,23 @@ table td, table th {
 
 table th {
     color: white;
-    background-color: #003366;
+    /* background-color: #003366; */
+    background-color: var(--cor-fundo-tabela);
 }
 
 table tbody tr:nth-child(odd) {
-    background-color: #00BFFF;
+    /* background-color: #00BFFF; */
+    background-color: var(--cor-fundo-tabela);
 }
 
 table tbody tr:nth-child(even) {
-    background-color: #87CEEB;
+    /* background-color: #87CEEB; */
+    background-color: var(--cor-fundo-tabela);
 }
 
 table tbody tr:hover {
-    background-color: #1E90FF;
+    /* background-color: #1E90FF; */
+    background-color: var(--cor-fundo-tabela);
 }
 
 table tbody tr td:last-child,
@@ -157,18 +166,22 @@ table tbody tr td.fit {
 }
 
 a.botao.receber {
-    background-color: rgb(95, 182, 95);
+    /* background-color: rgb(95, 182, 95); */
+    background-color: var(--cor-botoes);
 }
 a.botao.receber:hover {
-    background-color: rgb(38, 104, 50);
+    /* background-color: rgb(38, 104, 50); */
+    background-color: var(--cor-botoes);
 }
 
 a.botao.pagar {
-    background-color: rgb(255, 55, 24);
+    /* background-color: rgb(255, 55, 24); */
+    background-color: var(--cor-botoes);
 }
 
 a.botao.pagar:hover {
-    background-color: rgb(189, 21, 21);
+    /* background-color: rgb(189, 21, 21); */
+    background-color: var(--cor-botoes);
 }
 
 /* Main */

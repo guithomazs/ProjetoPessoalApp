@@ -1,0 +1,108 @@
+body {
+    background-image: linear-gradient(#64DFDF, #7400B8);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-image: linear-gradient(#118AB2, #073B4C);
+    display: flex;
+    justify-content: space-between;
+    /* Responsivo */
+    flex-wrap: wrap;
+}
+
+div#logo {
+    text-align: center;
+    margin: auto 0;
+}
+
+div#logo span {
+    font-weight: bold;
+    display: block;
+    font-size: 1.5em;
+}
+
+div#logo * {
+    margin-left: 0.5em;
+}
+
+div#logo img {
+    margin-top: 0.5em;
+    height: 4em;
+}
+
+div#logout {
+    display: inline-block;
+    text-align: center;
+    margin: auto 0.5em;
+}
+
+a.botao {
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #2c832d;
+    color: rgb(31, 29, 29);
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 0.4em;
+    line-height: 2em;
+}
+
+a.botao.pagar{
+    background-color: red;
+}
+
+a.botao:hover{
+    background-color: #1e5e20;
+}
+
+a.botao
+
+/* Tabela */
+
+table {
+    width: 99%;
+    border-spacing: 0.2em;
+    /* Responsivo */
+    display: block;
+    overflow-x: auto;
+    margin: 0 0.5em;
+}
+
+table td, table th {
+    padding: 0.5em;
+}
+
+table th {
+    color: white;
+    background-color: #EF476F;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #501a79;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #640991;
+}
+
+table tbody tr:hover {
+    background-color: #620a63;
+}
+
+table tfoot td {
+    text-align: center;
+}
+
+table tbody tr td:last-child,
+table tbody tr td.fit {
+    text-align: center;
+    width: 1%;
+    white-space: nowrap;
+}

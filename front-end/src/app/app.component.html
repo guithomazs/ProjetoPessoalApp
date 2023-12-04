@@ -1,59 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport">
-    <title>Teste contas</title>
-</head>
-<body>
-    <header>
-        <div id="logo">
-            <img src="../assets/images/user-profile.png" alt="user-profile">
-            <span id="nomeUser"> nomeUser </span>
-        </div>
+<header>
+    <div id="logo">
+        <img src="../assets/images/user-logo.png" alt="user-profile" routerLink="">
+        <span id="nomeUser"> nomeUser </span>
+    </div>
 
-        <div id="logout">
-            <a href="javascript:void(0)"
-               class="botao">Logout</a>
-        </div>
-
-    </header>
-
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Receber</th>
-                <th>Pagar</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Conta 1</td>
-                <td>R$ 100,00</td>
-                <td>R$ 100,00</td>
-                <td>
-                    <a href="javascript:void(0)" class="botao pagar">Pagar</a>
-                    <a href="javascript:void(0)" class="botao receber">Receber</a>
-                </td>
-            </tr>
-            <tr>
-                <td>Conta 2</td>
-                <td>R$ 100,00</td>
-                <td>R$ 100,00</td>
-                <td>
-                    <a href="javascript:void(0)" class="botao pagar">Pagar</a>
-                    <a href="javascript:void(0)" class="botao receber">Receber</a>
-                </td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="4">Total de registros: (()) </td>
-            </tr>
-        </tfoot>
-    </table>
-
-</body>
-</html>
+    <div id="logout">
+        <a href="javascript:void(0)"
+            class="botao logout">Logout</a>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a routerLink="/tabela">Tabela de dívidas</a></li>
+        <li><a routerLink="/pagas">Compras pagas</a></li>
+        <li><a routerLink="/participadas">Compras participadas</a></li>
+        <li><a routerLink="/registro">Registro de compras</a></li>
+    </ul>
+  </nav>
+  <main id="main">
+    <router-outlet></router-outlet>
+</main>
+ 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'front-end';
+  currentUrl: string = '';
+
+  constructor(
+    router: Router
+  ) {
+
+    router.events.subscribe(evento => {
+      if (evento instanceof NavigationEnd) {
+        if (evento.url != '') {
+          this.currentUrl = evento.url;
+        } else {
+          this.currentUrl = '';
+        }
+      }
+    });
+  }
+
 }

@@ -1,1 +1,23 @@
-<p>compras-pagas works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Hora</th>
+            <th>Total da compra</th>
+            <th>Local</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let compra of compras">
+            <td class="fit">{{ compra.data | date:'dd/MM/yyyy' }}</td>
+            <td class="fit">{{ compra.hora | slice:0:5 }}</td>
+            <td class="fit">{{ compra.total }}</td>
+            <td class="fit"> {{ compra.local }}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="5">Total de registros: (()) </td>
+        </tr>
+    </tfoot>
+</table>

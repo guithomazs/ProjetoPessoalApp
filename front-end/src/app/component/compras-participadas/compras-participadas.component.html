@@ -1,1 +1,27 @@
-<p>compras-participadas works!</p>
+<table>
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Hora</th>
+            <th>Fiador</th>
+            <th>Total da compra</th>
+            <th>Parcela da compra</th>
+            <th>Local</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let participada of compras">
+            <td class="fit">{{ participada.compra.data | date:'dd/MM/yyyy' }}</td>
+            <td class="fit">{{ participada.compra.hora | slice:0:5 }}</td>
+            <td> {{ participada.compra.fiador.nome }}</td>
+            <td class="fit">{{ participada.compra.total }}</td>
+            <td class="fit">{{ participada.quantidadeAPagar }}</td>
+            <td class="fit"> {{ participada.compra.local }}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6">Total de registros: (()) </td>
+        </tr>
+    </tfoot>
+</table>

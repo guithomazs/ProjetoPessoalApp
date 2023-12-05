@@ -24,6 +24,10 @@ public class CompraService implements IService<Compra> {
         return repo.findById(id).orElse(null);
     }
 
+    public List<Compra> getPagasParticipante(Long idParticipante) {
+        return repo.getPagas(idParticipante);
+    }
+
     @Override
     public List<Compra> get(String termoBusca) {
         throw new Error("Method not implemented");

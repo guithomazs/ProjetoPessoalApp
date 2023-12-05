@@ -1,0 +1,6 @@
+https://www.alibabacloud.com/help/en/ssl-certificate/user-guide/enable-https-on-spring-boot
+https://www.baeldung.com/spring-boot-https-self-signed-certificate
+https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#howto.webserver.configure-ssl
+https://www.youtube.com/watch?v=eBEq0Kv7vsw
+https://www.thomasvitale.com/https-spring-boot-ssl-certificate/
+https://stackoverflow.com/questions/46670046/adding-crt-to-spring-boot-to-enable-ssl

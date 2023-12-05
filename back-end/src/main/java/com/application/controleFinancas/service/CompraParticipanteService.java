@@ -19,6 +19,10 @@ public class CompraParticipanteService implements IService<CompraParticipante> {
         return repo.findAll();
     }
 
+    public List<CompraParticipante> getParticipadas(Long idParticipante) {
+        return repo.getParticipadas(idParticipante);
+    }
+
     @Override
     public CompraParticipante get(Long id) {
         return repo.findById(id).orElse(null);

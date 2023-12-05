@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import com.application.controleFinancas.model.CompraParticipante;
 import com.application.controleFinancas.service.CompraParticipanteService;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/compraParticipante")
 public class CompraParticipanteController implements IController<CompraParticipante>{
 
@@ -35,6 +37,12 @@ public class CompraParticipanteController implements IController<CompraParticipa
     @GetMapping("/{id}")
     public ResponseEntity<CompraParticipante> get(@PathVariable("id") Long id) {
         CompraParticipante result = servico.get(id);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
+    @GetMapping("/participadas/{id}")
+    public ResponseEntity<List<CompraParticipante>> getParticipadas(@PathVariable("id") Long idParticipante) {
+        List<CompraParticipante> result = servico.getParticipadas(idParticipante);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 

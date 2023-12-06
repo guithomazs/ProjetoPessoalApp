@@ -1,0 +1,96 @@
+body, app-root {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+app-root {   
+    display: flex;
+    flex-direction: column;
+}
+
+html, body, app-root {
+    height: 100%;
+}
+
+body {
+    // background-image: linear-gradient(#4361EE, #264653);
+    background: linear-gradient(to bottom, #a7cfdf 0%,#23538a 100%);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+
+a.botao {
+    border: 1px solid white;
+    border-radius: 4px;
+    background-color: #2c832d;
+    color: rgb(31, 29, 29);
+    font-weight: bolder;
+    cursor: pointer;
+    padding: 0.4em;
+    line-height: 2em;
+}
+
+a.botao.pagar{
+    background-color: red;
+}
+
+a.botao:hover{
+    background-color: #1e5e20;
+}
+
+
+// IMPORTAR DEPOIS PARA O COMPONENTE DE TABELAS
+table {
+    width: 99%;
+    border-spacing: 0.2em;
+    /* Responsivo */
+    display: block;
+    overflow-x: auto;
+    margin: 0 0.5em;
+}
+
+table td, table th {
+    padding: 0.5em;
+}
+
+table th {
+    color: white;
+    background-color: #003049;
+}
+
+table tbody tr:nth-child(odd) {
+    // background-color: rgb(63, 135, 105);
+    background-color: rgb(43, 145, 88);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: rgb(43, 145, 47);
+}
+
+table tbody tr:hover {
+    background-color: #067034;
+}
+
+table tfoot td {
+    text-align: center;
+    background-color: #003049;
+    color: #bf7720;
+}
+
+table tbody tr td:last-child,
+table tbody tr td.fit {
+    text-align: center;
+    width: 1%;
+    white-space: nowrap;
+}
+
+a.botao.logout {
+    background-color: grey;
+    color: rgb(241, 234, 234);
+}

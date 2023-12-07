@@ -1,0 +1,30 @@
+{
+    "julio": {
+        "receber": {
+            "klei": 6.50,
+            "marcos": 3,
+            "pp": 3
+        },
+        "pagar": {
+        }
+    },
+    "marcos": {
+        "receber": {
+            "klei": 4.50
+        },
+        "pagar": {
+        }
+    },
+    "pp": {
+        "receber": {
+            "marcos": 4,
+            "klei": 4
+        }
+    },
+    "steiner": {
+        "receber": {
+            "marcos": 5,
+            "klei": 5
+        }
+    }
+}

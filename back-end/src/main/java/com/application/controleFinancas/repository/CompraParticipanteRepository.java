@@ -9,7 +9,7 @@ import com.application.controleFinancas.model.CompraParticipante;
 
 public interface CompraParticipanteRepository extends JpaRepository<CompraParticipante, Long>{
     @Query(
-        "SELECT participadas " +
+        "SELECT participadas" +
         " FROM CompraParticipante participadas" +
         " WHERE participadas.participante.id = ?1"
     )

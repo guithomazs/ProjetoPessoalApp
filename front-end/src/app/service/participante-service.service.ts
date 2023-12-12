@@ -13,12 +13,12 @@ export class ParticipanteService {
   apiUrl: string = environment.API_URL;
 
   getPagas(): Observable<any> {
-    let url = this.apiUrl + "/compra/pagas/7";
+    let url = this.apiUrl + "/compra/pagas/1";
     return this.http.get(url);
   }
 
   getParticipadas(): Observable<any> {
-    let url = this.apiUrl + "/compraParticipante/participadas/5";
+    let url = this.apiUrl + "/compraParticipante/participadas/3";
     return this.http.get(url);
   }
 

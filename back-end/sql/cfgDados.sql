@@ -21,22 +21,29 @@ UNLOCK TABLES;
 
 -- valor | compra | participante
 LOCK TABLES `compra_participante` WRITE;
-INSERT INTO `compra_participante` VALUES
-	(DEFAULT, '3', 1, 4),
-	(DEFAULT, '6.50', 1, 3),
-	(DEFAULT, '3', 1, 1),
-	(DEFAULT, '3', 1, 6),
-	(DEFAULT, '3', 2, 1),
-	(DEFAULT, '4.50', 2, 3),
-	(DEFAULT, '4', 3, 6),
-	(DEFAULT, '4', 3, 1),
-	(DEFAULT, '4', 3, 3),
-	(DEFAULT, '5', 4, 7),
-	(DEFAULT, '5', 4, 1),
-	(DEFAULT, '5', 4, 3),
+INSERT INTO `compra_participante` (`compra_id`, `participante_id`, `valor`) VALUES
+	(1, 4, '3'),
+	(1, 3, '6.50'),
+	(1, 1, '3'),
+	(1, 6, '3'),
+	(2, 1, '3'),
+	(2, 3, '4.50'),
+	(3, 6, '4'),
+	(3, 1, '4'),
+	(3, 3, '4'),
+	(4, 7, '5'),
+	(4, 1, '5'),
+	(4, 3, '5');
 UNLOCK TABLES;
 
 LOCK TABLES `divida_participante` WRITE;
-INSERT INTO `divida_participante` VALUES
-	
+INSERT INTO `divida_participante` (`credor_id`, `devedor_id`, `divida`) VALUES
+	(4, 3, "6.50"),
+	(4, 1, "3"),
+	(4, 6, "3"),
+	(1, 3, "4.50"),
+	(6, 1, "4"),
+	(6, 3, "4"),
+	(7, 1, "5"),
+	(7, 3, "5");
 UNLOCK TABLES;

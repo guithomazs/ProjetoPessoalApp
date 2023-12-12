@@ -18,14 +18,14 @@ public class CompraParticipante implements Serializable {
     @Column(nullable = false, updatable = false)
     private Long id;
 
-    @Column(nullable = false, updatable = false)
-    private BigDecimal quantidade_a_Pagar;
-
     @ManyToOne(optional = false)
     private Compra compra;
 
     @ManyToOne(optional = false)
     private Participante participante;
+
+    @Column(nullable = false, updatable = false)
+    private BigDecimal valor;
 
     public Long getId() {
         return id;
@@ -35,12 +35,12 @@ public class CompraParticipante implements Serializable {
         this.id = id;
     }
 
-    public BigDecimal getQuantidadeAPagar() {
-        return quantidade_a_Pagar;
+    public BigDecimal getValor() {
+        return valor;
     }
 
-    public void setQuantidadeAPagar(BigDecimal quantidadeAPagar) {
-        this.quantidade_a_Pagar = quantidadeAPagar;
+    public void setValor(BigDecimal valor) {
+        this.valor = valor;
     }
 
     public Compra getCompra() {

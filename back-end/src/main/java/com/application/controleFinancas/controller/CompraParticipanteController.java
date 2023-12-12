@@ -43,6 +43,8 @@ public class CompraParticipanteController implements IController<CompraParticipa
     @GetMapping("/participadas/{id}")
     public ResponseEntity<List<CompraParticipante>> getParticipadas(@PathVariable("id") Long idParticipante) {
         List<CompraParticipante> result = servico.getParticipadas(idParticipante);
+        for(int i = 0; i < 10; i++)
+            System.out.println("************************");
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 

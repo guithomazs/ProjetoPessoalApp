@@ -1,0 +1,89 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(#fff, #000);
+}
+
+.wrapper {
+    max-width: 60%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, .5);
+    border-radius: 0 0 0.5em 0.5em;
+
+    overflow-x: scroll;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    font: ultra-condensed small-caps 2em "Fira Sans", sans-serif;
+}
+
+.header-names {
+    background: #ECECEC;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.header-names::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.header-names {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.buttons {
+    background: #ECECEC;
+    display: flex;
+    padding: 5px 10px;
+    margin: 0;
+    width: fit-content;
+}
+
+.button-left {
+    border-radius: 0 0 0 0.5em;
+}
+
+.button-right {
+    border-radius: 0 0 0.5em 0;
+}
+
+.buttons:hover{
+    transform: scale(115%);
+}
+
+.list-item {
+    padding: 5px 10px;
+    margin: 0em 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.list-item:hover {
+    transform: scale(115%);
+}
+
+.selected {
+    background: linear-gradient(180deg, #000000 0%, #666666 100%);
+    height: 150%;
+    color: white;
+    border-radius: 0 0 0.5em 0.5em;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, .5);
+}

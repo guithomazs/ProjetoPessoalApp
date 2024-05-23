@@ -33,6 +33,8 @@ body {
     display: flex;
     overflow-x: auto;
     scrollbar-width: none;
+    scroll-behavior: smooth;
+    direction: ltr;
 }
 
 .wrapper .header-names::-webkit-scrollbar {

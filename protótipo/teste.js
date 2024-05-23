@@ -1,41 +1,27 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const scrollImages = document.querySelector(".scroll-images");
-    const scrollLength = scrollImages.scrollWidth - scrollImages.clientWidth;
-    const leftButton = document.querySelector(".left");
-    const rightButton = document.querySelector(".right");
-  
-    function checkScroll() {
-      const currentScroll = scrollImages.scrollLeft;
-      if (currentScroll === 0) {
-        leftButton.setAttribute("disabled", "true");
-        rightButton.removeAttribute("disabled");
-      } else if (currentScroll === scrollLength) {
-        rightButton.setAttribute("disabled", "true");
-        leftButton.removeAttribute("disabled");
-      } else {
-        leftButton.removeAttribute("disabled");
-        rightButton.removeAttribute("disabled");
-      }
+let elementoSelecionado = null;
+
+function clicou( elemento ) {
+    elementoSelecionado = document.getElementsByClassName("selected")[0];
+    
+    if(elementoSelecionado == elemento) {
+        console.log("pega outro ai porra")
+        console.log(elemento, elementoSelecionado)
     }
-  
-    scrollImages.addEventListener("scroll", checkScroll);
-    window.addEventListener("resize", checkScroll);
-    checkScroll();
-  
-    function leftScroll() {
-      scrollImages.scrollBy({
-        left: -200,
-        behavior: "smooth"
-      });
+    else {
+        elementoSelecionado.classList.remove("selected")
+        elemento.classList.add("selected")
     }
-  
-    function rightScroll() {
-      scrollImages.scrollBy({
-        left: 200,
-        behavior: "smooth"
-      });
+}
+
+window.onload = () => {
+    const names = document.getElementById("header-names")
+    const leftButton = document.getElementById("prev-slide")
+    const rightButton = document.getElementById("next-slide")
+    
+    leftButton.onclick = () => {
+        names.scrollLeft -= 100
     }
-  
-    leftButton.addEventListener("click", leftScroll);
-    rightButton.addEventListener("click", rightScroll);
-  });
+    rightButton.onclick = () => {
+        names.scrollLeft += 100
+    }
+}

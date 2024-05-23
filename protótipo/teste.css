@@ -1,75 +1,69 @@
-.cover {
-    position: relative;
-    padding: 0px 30px;
-    margin-top: 100px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.left {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.right {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.scroll-images {
-    position: relative;
-    width: 100%;
-    padding: 40px 0px;
-    height: auto;
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-}
-
-.child {
+body {
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-width: 250px;
-    height: 200px;
-    padding: 0px 15px;
-    margin: 1px 10px;
-    border: 1px solid #f1f1f1;
-    overflow: hidden;
-    -webkit-box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 10%);;
-    box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 10%);;
+    min-height: 100vh;
+    background: linear-gradient(#fff, #000);
 }
 
-.child img, .child > svg {
-    position: absolute;
-    margin-top: -195px;
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    background: #03A9F4;
-}
-
-.scroll-images::-webkit-scrollbar {
-    width: 5px;
-    height: 8px;
-    background-color: #aaa;
-}
-
-.scroll-images::-webkit-scrollbar-thumb {
-    background-color: black;
-}
-
-button {
+.header {
+    max-width: 1200px;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
     background-color: transparent;
+}
+
+.wrapper {
+    width: 60%;
+    height: 50px;
+    display: flex;
+    border-radius: 0 0 0.5em 0.5em;
+    background-color: transparent;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .5);
+}
+
+.wrapper .header-names {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.wrapper .header-names::-webkit-scrollbar {
+    display: none;
+}
+
+.wrapper .slide-button,
+.wrapper .list-item {
+    background: #ECECEC;
+    color: #000;
+    font: ultra-condensed small-caps 2em "Fira Sans", sans-serif;
+    cursor: pointer;
     border: none;
     outline: none;
-    cursor: pointer;
-    font-size: 25px;
+    padding: 5px 5px;
+    height: 50px;
+    padding: 5px 15px;
+}
+
+.wrapper .slide-button#prev-slide {
+    border-radius: 0 0 0 0.5em;
+}
+
+.wrapper .slide-button#next-slide {
+    border-radius: 0 0 0.5em 0;
+}
+
+.wrapper .header-names .selected {
+    background: linear-gradient(180deg, #000000 0%, #666666 100%);
+    color: white;
+    border-radius: 0 0 0.5em 0.5em;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .5);
 }

@@ -14,7 +14,7 @@ function clicou( elemento ) {
 }
 
 window.onload = () => {
-    const names = document.getElementById("header-names")
+    const names = document.getElementById("teste")
     const leftButton = document.getElementById("prev-slide")
     const rightButton = document.getElementById("next-slide")
     

@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#fff, #000);
+}
+
+.header {
+    max-width: 1200px;
+    width: 100%;
+    max-height: 120px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.header-names {
+    width: 10%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+.header-names::-webkit-scrollbar {
+    display: none;
+}
+
+.slide-button,
+.list-item {
+    color: #000;
+    width: fit-content;
+    font: ultra-condensed small-caps 2em "Fira Sans", sans-serif;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+}
+
+.slide-button {
+    border-radius: 0 0 0.5em 0.5em;
+    width: fit-content;
+    min-width: 5%;
+    height: fit-content;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .5);
+}
+
+.slide-button#prev-slide {
+    border-radius: 0 0 0 0.5em;
+}
+
+.slide-button#next-slide {
+    border-radius: 0 0 0.5em 0;
+}
+
+.selected {
+    background: linear-gradient(180deg, #000000 0%, #666666 100%);
+    color: white;
+    border-radius: 0 0 0.5em 0.5em;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .5);
+}
+
+.no-spacing {
+    border: none;
+    border-spacing: 0; /* Removes the cell spacing via CSS */
+    border-collapse: collapse;
+}
+
+.first-row {
+    background: #ECECEC;
+    border-radius: 0 0 0.5em 0.5em;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, .5);
+}
+
+.wrapper {
+    display: flex;
+    width: 60%;
+}
+
+.teste {
+    display: flex;
+    width: 80%;
+    overflow-x: auto;
+    height: fit-content;
+    scrollbar-width: none;
+    padding-bottom: 5px;
+}
+
+.esconder {
+    visibility: hidden;
+}
